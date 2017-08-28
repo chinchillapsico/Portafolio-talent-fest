@@ -1,0 +1,524 @@
+
+/*Estilos generales*/
+/* fuentes font-family: 'Encode Sans Semi Expanded', sans-serif;
+font-family: 'Source Code Pro', monospace;
+.bg-image p*/
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Semi+Expanded|Source+Code+Pro');
+*{
+  box-sizing: border-box;
+}
+html{
+  width: 100%;
+  height:auto;
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-size: 100%;
+  line-height: 1.45;
+  color: #212121;
+}
+
+a{
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+/*estilos en caso de usar el boton*/
+.btn{
+  display: inline-block;
+  margin: 1rem 0;
+  color: white;
+  font-weight: 500;
+  font-size: 1.3rem;
+  background: $color-primary;
+  letter-spacing: .02em;
+  border: none;
+  border-radius: 5px;
+  padding: .8rem 1rem .9rem;
+  text-shadow: 0 1px rgba(black,.3);
+  box-shadow: 0 0 2px rgba(black,.2);
+
+  @media (max-width: $bp-s){
+    padding: .5rem .7rem .6rem;
+    font-size: 1rem;
+  }
+
+  &:hover{
+    background: lighten($color-primary,5%);
+    color: #fff;
+  }
+  &:focus,
+  &:active,
+  &:focus:active{
+    background: darken($color-primary,5%);
+    border-color: darken($color-primary,5%);
+    box-shadow: 0 2px 5px 0 rgba(black,.5) inset;
+  }
+}
+/* contenedor*/
+.container{
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* header: abarca desde mi nombre hasta la sección about me*/
+header{
+  color: white;
+  background: $color-primary;
+  padding: 15rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  @media (max-width: $bp-s){
+    padding: 2rem 0;
+  }
+
+  h1{
+    font-size: 3rem;
+    margin: 0 0 1rem;
+
+    @media (max-width: $bp-s){
+      font-size: 2rem;
+    }
+  }
+  h2{
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+
+    @media (max-width: $bp-s){
+      font-size: 1.5rem;
+    }
+  }
+}
+
+section{
+  background: #484652;
+  color: $color-grey;
+  padding: 2rem 0;
+
+  @media (max-width: $bp-s){
+    padding: 1rem 0;
+  }
+  
+  &.section--primary{
+    background: $color-primary;
+    color: #fff;
+    padding-top:100px;
+    a{
+      color:#fff;
+    }
+  }
+  &.section--primary--alt{
+    background: desaturate(lighten($color-primary,15%),10%);
+    color: #fff;
+    height: 600px;
+  }
+  &.section--primary--light{
+    background: rgba($color-primary,.1);
+  }
+
+  &.section--grey{
+    background: $color-grey;
+    color: #fff;
+  }
+  &.section--grey--light{
+    background: $color-grey--light;
+    color: #fff;
+  }
+
+  h3{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 1rem;
+    padding: 25px 0;
+
+    @media (max-width: $bp-s){
+      font-size: 1.5rem;
+    }
+  }
+  
+  li{
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-bottom: 10px;
+  }
+  p{
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+}
+/*----------------------col- head------------------------------------------------------*/
+.col{
+  margin: 0 1.5%;
+  display: inline-block;
+  vertical-align: top;
+}
+.col-7{
+  @extend .col;
+  width: 50%;
+  
+  @media (max-width: $bp-s){
+    width: 100%;
+    margin: 0;
+  }
+}
+.col-3{
+  @extend .col;
+  width: 29%;
+
+  @media (max-width: $bp-s){
+    width: 100%;
+    margin: 0;
+  }
+}
+.col-5{
+  @extend .col;
+  width: 30%;
+
+  @media (max-width: $bp-xs){
+    width: 60%;
+    margin: 0;
+  }
+}
+
+/*-------------------- acerca de mi ---------------------*/
+.style8 {
+  border-top: 3px double #8c8b8b;
+  margin: 100px 230px;
+}
+.about-me{
+  display: inline-block;
+  margin-top:50px;
+  font-size:20px;
+  max-height: 500px;
+}
+/*estilos al presionar acerca de mí*/
+
+.presionar{
+  display: inline-block;
+  text-align: center;
+  padding: 1rem;
+
+  &:hover{
+    background: rgba(white,.1);
+  }
+  
+  @media (max-width: $bp-s){
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(white,.2);
+
+    &:last-child{
+      border: none;
+    }
+  }
+  
+  i{
+    font-size: 2rem;
+    margin: 0 10px 0 0;
+
+    @media (max-width: $bp-s){
+      font-size: 1.5rem;
+      width: 2rem;
+      text-align: center;
+      margin: 0 0 1rem 0;
+      float: left;
+    }
+  }
+
+  p{
+    margin: 0 0 1rem 0;
+    padding-top:20px;
+    font-size: 1rem;
+
+    @media (max-width: $bp-s){
+      margin-left: 1rem;
+    }
+  }
+}
+/*-------------------------cita--------------------------*/
+
+blockquote{
+  position: relative;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+ 
+  &:before{
+    display: block;
+    color: $color-primary;
+    font-size: 2rem;
+    content: '\201C';
+  }
+   &:after{
+    display: block;
+    padding-top: 10px;
+    color: $color-primary;
+    font-size: 2rem;
+    content: "\201D";
+  }
+  
+  p{
+    margin: 0;
+    display: inline;
+    font-size: 1.5rem;
+    
+    @media (max-width: $bp-s){
+      font-size: 1.2rem;
+    }
+  }
+  
+  cite{
+    font-size: 1rem;
+    display: block;
+    margin: .5rem 0 0 1.2rem;
+    text-style: italic;
+    
+    @media (max-width: $bp-s){
+      font-size: .8rem;
+    }
+  }
+  
+}
+/*-------------------------- footer -------------------------------------**/
+footer{
+  background: #2d2b2a;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: .8rem;
+  color: rgba(white,.4);
+
+  ul{
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+
+    li{
+      display: inline-block;
+
+      a{
+        display: block;
+        padding: .4rem .7rem;
+        font-size: .9rem;
+        text-decoration: none;
+        color: rgba(white,.7);
+
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.text--center{
+  text-align: center;
+}
+.text--left{
+  text-align: left;
+}
+.bg-image{
+  background: $color-primary;
+  font-family: 'Encode Sans', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  height:auto;
+  width:100%;
+  text-shadow: 2px 0 5px black;
+  .head{
+     padding-top: 250px;
+  }
+  p{
+    padding-bottom: 0px;
+    font-size:16px;
+  }
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #333 url('http://abload.de/img/wallpaper-89202483l3i.jpg') no-repeat top center;
+    background-size: cover;
+    opacity: .8;
+    background-attachment: fixed;
+    filter: blur(0.7px);
+    transform: scale(1.1);
+  }
+  section--primary
+  &.bg-image-2:before{
+    
+  }
+}
+/*--------navbar -----------------*/
+.navbar {
+  height: 90px;
+  font-size: 14px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 100;
+  -webkit-transition: background-color 1s ease 0s;
+  transition: background-color 1s ease 0s;
+}
+
+.navbar-default {
+  .navbar-brand {
+    margin-top: 10px;
+    color: white;
+    &:hover {
+      color: #F2D4D7;
+      border: 1px solid #F2D4D7;
+    }
+  }
+  .navbar-nav > {
+    li > a {
+      color: white;
+      margin: 10px 0px 5px 5px;
+      &:hover, &:active, &:focus {
+        color: #F2D4D7;
+        border: 2px solid white;
+        border-radius: 3px;
+      }
+      &:visited {
+        color: #F2D4D7;
+        text-decoration: none;
+      }
+    }
+    .active > a {
+      background-color: transparent;
+      color: #F2D4D7;
+      &:hover, &:focus {
+        background-color: transparent;
+        color: #F2D4D7;
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: #F2D4D7;
+    &:hover, &:focus {
+      background-color: transparent;
+      }
+    .icon-bar {
+      color: #F2D4D7;
+      background-color: #F2D4D7;
+    }
+  }
+  .navbar-collapse.collapse.in ul {
+    background-color: #221E2D;
+  }
+}
+
+/* Solid class attached on scroll past first section */
+
+.navbar.solid {
+  background-color: $color-blue;
+  -webkit-transition: background-color 1s ease 0s;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+  .navbar-brand {
+    color: $color-blue;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+  }
+  .navbar-nav > li > a {
+    color: #F2D4D7;
+    -webkit-transition: color 1s ease 0s;
+    transition: color 1s ease 0s;
+  }
+}
+
+/**---------------------------------carousel ----------------------------------------*/
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+    }
+    .active {
+      opacity: 1;
+      &.left, &.right {
+        left: 0;
+        opacity: 0;
+        z-index: 1;
+      }
+    }
+    .next.left, .prev.right {
+      opacity: 1;
+    }
+  }
+  .carousel-control {
+    z-index: 2;
+  }
+}
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item {
+    &.next, &.active.right, &.prev, &.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    &.next.left, &.prev.right, &.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+
+html, body, .carousel {
+  height: 100%;
+}
+
+.carousel-inner {
+  height: 100%;
+  .item {
+    height: 100%;
+  }
+}
+
+.item {
+  &:nth-child(1) {
+    background: url('../img/pinterest.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+  }
+  &:nth-child(2) {
+    background: url('../img/game.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  &:nth-child(3) {
+    background-image: url('../img/lyft.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
